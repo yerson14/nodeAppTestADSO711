@@ -26,12 +26,12 @@ const getArticle = async (id) => {
   }
 };
 
-const createArticle = async (title, content, UserId) => {
+const createArticle = async (title, content, userId) => {
   try {
     let newArticle = await db.Article.create({
       title,
       content,
-      UserId,
+      userId,
     });
     if (newArticle) {
         const categories = [2,3,4];
